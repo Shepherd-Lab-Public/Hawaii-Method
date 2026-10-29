@@ -6,7 +6,7 @@ The Kauhale Method was created by John Shepherd and Sven Prevrhal, inspired by c
 
 Copyright © 2026 John A. Shepherd and Sven Prevrhal. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): you may share and adapt it, with credit to the authors.
 
-Version 2026-10-24. Changes from 2026-10-09: a new Safeguards section (section 17) for health, personal, and other sensitive data, in the repository and in agent sessions; only the owner opens a hale, so agents never start other hale; the hybrid narrowed to owner-requested dispatch; SQLite guidance for projects that need a database; licensed under CC BY 4.0.
+Version 2026-10-29. Changes from 2026-10-24: a kauhale can now work in other languages. Setup starts in the person's language; the agents' working language is recorded in KAUHALE.md; file names, headings, IDs, and dates stay in English while everything people read is in the working language. Notes for each language, including ʻōlelo Hawaiʻi, are in the new companion file `languages.md`.
 
 Throughout this guide, **the owner** means you: the person the agents work for, who makes the final decisions.
 
