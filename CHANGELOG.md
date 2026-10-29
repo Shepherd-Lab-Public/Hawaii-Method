@@ -4,7 +4,7 @@ Newest first. Each heading is a git tag.
 
 ## Unreleased
 
-- Working languages: a kauhale can write and talk in any language its models handle well, while the guide stays in English. Setup (Node 9) asks for the working language and variant; KAUHALE.md records it; the CLAUDE.md template and the base rules keep the structure (file names, headings, IDs, status words, ISO dates) in English and the content in the working language; section 13 notes that quality varies by model. New companion file `languages.md` with notes for Spanish, French, Portuguese, Mandarin, Japanese, Hindi, Arabic, and Bengali.
+- Working languages: a kauhale can write and talk in any language its models handle well, while the guide stays in English. Setup (Node 9) asks for the working language and variant; KAUHALE.md records it; the CLAUDE.md template and the base rules keep the structure (file names, headings, IDs, status words, ISO dates) in English and the content in the working language; section 13 notes that quality varies by model. New companion file `languages.md` with notes for Spanish, French, Portuguese, German, Mandarin, Japanese, Hindi, Arabic, and Bengali.
 
 ## 2026-10-24
 

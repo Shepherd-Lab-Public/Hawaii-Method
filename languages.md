@@ -33,6 +33,7 @@ The structure stays in English so every kauhale has the same layout and the rout
 | Spanish | Latin American or European; formal (usted) or informal (tú) | Generally strong in current models. |
 | French | Region if it matters (France, Canada); formal (vous) by default | Generally strong. |
 | Portuguese | Brazilian or European | Generally strong; the variants differ in spelling and vocabulary. |
+| German | Region if it matters (Germany, Austria, Switzerland, where ß is written ss); formal (Sie) or informal (du) | Generally strong. Long compound words are normal; agree on technical terms once, in KAUHALE.md, so hale don't mix German and English names for the same thing. |
 | Mandarin Chinese | Simplified or Traditional characters | Generally strong. Uses more context than English. |
 | Japanese | Register: polite (です/ます) or plain (だ/である) | Generally strong. Uses more context than English. |
 | Hindi | Devanagari script; how much English technical vocabulary to keep | Good, but less consistent; pilot carefully. Keep Western digits in IDs and dates. |
