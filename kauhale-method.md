@@ -162,7 +162,7 @@ Ask how the agents should write: voice, spelling (US or UK), punctuation habits,
 
 Then ask: "Will the project touch anything sensitive: patient or participant data, personal contact details, salaries, evaluations of people, unpublished results, passwords or keys?" Use the list in Part B section 17. For each yes, agree where it will live outside the repository. If identifiable health or participant data is involved, ask whether the institution and the AI service plan allow it in agent sessions; if not, or if they are unsure, the agents use de-identified data only. Record the answers in KAUHALE.md under the data rules, and suggest a compliance advisor (Part B section 7) for regulated data.
 
-Ask: "What language should the agents write in and talk with you in?" This guide stays in English, but a kauhale can work in any language the AI model handles well. Ask for the variant too (Latin American or European Spanish, Simplified or Traditional Chinese). Record it in KAUHALE.md as the working language, and from here on continue the setup in that language if the person prefers. For any language other than English, read `languages.md` in the Kauhale Method repository.
+Ask: "What language should the agents write in and talk with you in?" This guide stays in English, but a kauhale can work in any language the AI model handles well. Ask for the variant too (Latin American or European Spanish, Simplified or Traditional Chinese). Record it in KAUHALE.md as the working language, and from here on continue the setup in that language if the person prefers. For any language other than English, read `languages.md` (https://github.com/Shepherd-Lab-Public/kauhale-method/blob/main/languages.md), or ask the person to upload it.
 
 ### Node 10. Build it
 

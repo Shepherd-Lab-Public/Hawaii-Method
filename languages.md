@@ -19,6 +19,7 @@ The structure stays in English so every kauhale has the same layout and the rout
 - **Routine words work in both languages.** Agents accept "checkpoint", "sync", and "start" in English or in the working language (for example, "punto de control", "sincronizar", "inicio").
 - **The Hawaiian words stay as they are** in every language: kauhale, hale, haku, kuleana.
 - **Save every file as UTF-8.** Most tools do this already; some Windows tools default to other encodings and garble non-Latin text.
+- **In Claude Code, set the response language too.** Add `"language": "<language>"` (for example, `"language": "spanish"`) to the kauhale's `.claude/settings.json`, so every session responds in the working language. Other tools have their own settings; the rule in CLAUDE.md works everywhere.
 
 ## Before you rely on a language
 
@@ -42,7 +43,7 @@ The structure stays in English so every kauhale has the same layout and the rout
 
 | ʻŌlelo Hawaiʻi | See below | Guidance is being developed with the Native Hawaiian community. |
 
-These notes are general guidance, not test results. Models change quickly; your pilot is what counts.
+These notes are general guidance, not test results. Models change quickly; your pilot is what counts. For published figures, see your model provider's documentation (for Claude: [Multilingual support](https://platform.claude.com/docs/en/build-with-claude/multilingual-support)).
 
 ### ʻŌlelo Hawaiʻi
 
