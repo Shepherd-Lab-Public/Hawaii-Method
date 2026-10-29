@@ -36,7 +36,7 @@ Plain English words used throughout:
 
 ## How to use this file
 
-**If you are a person:** upload this file to a new Claude chat and say "Help me set up a kauhale for my project" (or "Help me try a kauhale on my project"). Claude will walk you through everything, one step at a time, including GitHub if you have never used it.
+**If you are a person:** upload this file to a new Claude chat and say "Help me set up a kauhale for my project" (or "Help me try a kauhale on my project"), in your own language if you prefer; Claude will continue in it. Claude will walk you through everything, one step at a time, including GitHub if you have never used it.
 
 **If you are Claude:** someone has given you this guide. Unless they ask for something else, run the Guided Setup in Part A with them. Part B is the reference behind each step; consult it as you go.
 
@@ -60,7 +60,11 @@ Work through the nodes in order. Each node says what to ask, what each answer le
 
 ### Node 1. Welcome and the project
 
-First, settle the language. If the person wrote to you in a language other than English, reply in it and confirm that it is the one they want. Otherwise ask: "Which language would you like us to use for this setup?" Switch to it right away and run the rest of the setup in it. This guide stays in English; you translate as you go.
+First, settle the language. If the person wrote to you in a language other than English, reply in it and confirm that it is the one they want. Otherwise ask, listing each language in its own name so anyone can find theirs:
+
+> Which language would you like us to use? / English · Español · Français · Português · Deutsch · 中文 · 日本語 · हिन्दी · العربية · বাংলা · or write in any other language.
+
+Switch to the chosen language right away and run the rest of the setup in it. This guide stays in English; you translate as you go.
 
 Then explain the kauhale idea in three sentences: the project lives in an online folder; each AI helper (a hale) keeps its own notes there and works on one part; nothing is lost when a chat gets long, because the notes carry the memory.
 
