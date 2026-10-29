@@ -40,7 +40,13 @@ The structure stays in English so every kauhale has the same layout and the rout
 | Arabic | Modern Standard Arabic or a regional dialect | Good, but less consistent. Written right to left: keep IDs in code formatting (`SCI-004`) and English headings on their own lines so editors display them cleanly. Keep Western digits in IDs and dates. |
 | Bengali | Bengali script; how much English technical vocabulary to keep | Good, but less consistent; pilot carefully. Keep Western digits in IDs and dates. |
 
+| ʻŌlelo Hawaiʻi | See below | Guidance is being developed with the Native Hawaiian community. |
+
 These notes are general guidance, not test results. Models change quickly; your pilot is what counts.
+
+### ʻŌlelo Hawaiʻi
+
+Details for running a kauhale in ʻōlelo Hawaiʻi are being developed with guidance from the Native Hawaiian community, and this section will be updated as that work goes on. Until then, know that AI models write Hawaiian far less reliably than the languages above: ʻokina and kahakō go missing, sentences follow English patterns, and words are sometimes invented. Meaning in Hawaiian also depends on context and kaona (layered meaning) that no dictionary captures. A kauhale working in Hawaiian should be led and reviewed by fluent speakers. Write the ʻokina as ʻ (U+02BB), not an apostrophe.
 
 ## Teams that speak different languages
 
