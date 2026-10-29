@@ -60,7 +60,9 @@ Work through the nodes in order. Each node says what to ask, what each answer le
 
 ### Node 1. Welcome and the project
 
-Explain the kauhale idea in three sentences: the project lives in an online folder; each AI helper (a hale) keeps its own notes there and works on one part; nothing is lost when a chat gets long, because the notes carry the memory.
+First, settle the language. If the person wrote to you in a language other than English, reply in it and confirm that it is the one they want. Otherwise ask: "Which language would you like us to use for this setup?" Switch to it right away and run the rest of the setup in it. This guide stays in English; you translate as you go.
+
+Then explain the kauhale idea in three sentences: the project lives in an online folder; each AI helper (a hale) keeps its own notes there and works on one part; nothing is lost when a chat gets long, because the notes carry the memory.
 
 Ask:
 1. "What is the project?" (a book, a website, research or code, an event, a grant, something else)
@@ -162,7 +164,7 @@ Ask how the agents should write: voice, spelling (US or UK), punctuation habits,
 
 Then ask: "Will the project touch anything sensitive: patient or participant data, personal contact details, salaries, evaluations of people, unpublished results, passwords or keys?" Use the list in Part B section 17. For each yes, agree where it will live outside the repository. If identifiable health or participant data is involved, ask whether the institution and the AI service plan allow it in agent sessions; if not, or if they are unsure, the agents use de-identified data only. Record the answers in KAUHALE.md under the data rules, and suggest a compliance advisor (Part B section 7) for regulated data.
 
-Ask: "What language should the agents write in and talk with you in?" This guide stays in English, but a kauhale can work in any language the AI model handles well. Ask for the variant too (Latin American or European Spanish, Simplified or Traditional Chinese). Record it in KAUHALE.md as the working language, and from here on continue the setup in that language if the person prefers. For any language other than English, read `languages.md` (https://github.com/Shepherd-Lab-Public/kauhale-method/blob/main/languages.md), or ask the person to upload it.
+Confirm the agents' working language: the language they will write in and talk with the owner in. It is usually the setup language from Node 1, but not always (a setup run in English for a team that will work in Japanese). A kauhale can work in any language the AI model handles well. Ask for the variant too (Latin American or European Spanish, Simplified or Traditional Chinese), and record it in KAUHALE.md as the working language. For any language other than English, read `languages.md` (https://github.com/Shepherd-Lab-Public/kauhale-method/blob/main/languages.md), or ask the person to upload it.
 
 ### Node 10. Build it
 
