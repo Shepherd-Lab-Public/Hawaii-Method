@@ -4,6 +4,10 @@ A way to run a large, long project as a household of AI agents. The guide itself
 
 Copyright © 2026 John A. Shepherd and Sven Prevrhal. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): you may share and adapt it, with credit to the authors.
 
+## Other languages
+
+The guide is in English, but a kauhale can work in other languages. See [languages.md](languages.md).
+
 ## Versions
 
 Each shared version is a git tag named by date (`2026-10-09`). `CHANGELOG.md` says what changed in each one and why. To get the exact file someone received:

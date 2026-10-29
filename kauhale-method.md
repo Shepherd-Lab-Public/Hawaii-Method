@@ -162,6 +162,8 @@ Ask how the agents should write: voice, spelling (US or UK), punctuation habits,
 
 Then ask: "Will the project touch anything sensitive: patient or participant data, personal contact details, salaries, evaluations of people, unpublished results, passwords or keys?" Use the list in Part B section 17. For each yes, agree where it will live outside the repository. If identifiable health or participant data is involved, ask whether the institution and the AI service plan allow it in agent sessions; if not, or if they are unsure, the agents use de-identified data only. Record the answers in KAUHALE.md under the data rules, and suggest a compliance advisor (Part B section 7) for regulated data.
 
+Ask: "What language should the agents write in and talk with you in?" This guide stays in English, but a kauhale can work in any language the AI model handles well. Ask for the variant too (Latin American or European Spanish, Simplified or Traditional Chinese). Record it in KAUHALE.md as the working language, and from here on continue the setup in that language if the person prefers. For any language other than English, read `languages.md` in the Kauhale Method repository.
+
 ### Node 10. Build it
 
 Summarize the plan in a few lines and ask for the go-ahead. For an existing repository, do all of this on a new branch, follow the remaining steps of the adoption checklist (Part B section 9), and merge only after the person approves. Then:
@@ -683,6 +685,7 @@ Nothing in the method is specific to Claude. It needs three things: a model that
 - **Session launchers are tool-specific.** The method needs a way to start a fresh session in a given role. Claude Code does it with project skills invoked as slash commands (section 12); other tools have their own mechanisms, or the role line pasted into a new session works anywhere. Keep the launcher thin: it should only point to the role file, so the rules stay in one tool-neutral place.
 - **Models can be mixed across hale.** The repository is the only interface between agents, so one hale can run on one model and another on a different one. Keep the one-session-per-hale rule.
 - **Helper agents follow the same rule.** Many tools let an agent launch other agents. Whatever the tool calls them, an agent that loads a role file is that hale, so only the owner starts one (section 12, "Only the owner opens a hale").
+- **Working languages differ by model.** A kauhale can work in any language its models handle well, and quality varies by language and by model. Some scripts also use more of the context window for the same notes. Pilot a new working language before relying on it (`languages.md`).
 - **Data handling differs by service.** What one AI service retains, logs, or uses for training, another may not, and the same vendor's plans can differ. Check each service a hale uses against the project's data rules before it sees anything sensitive (section 17).
 - **Discipline matters more with weaker models.** A model that follows instructions loosely will skip checkpoints or write outside its kuleana. Enforce ownership in GitHub (see section 18) rather than relying on instructions alone.
 
@@ -750,6 +753,9 @@ in staff/lead/KAUHALE.md.
 - Logs and notes summarize; never quote an email or copy an address.
 - If something sensitive reaches git or an agent session, stop and tell
   the owner.
+- Write working files and talk with the owner in <working language>.
+  Keep file and folder names, template headings, IDs, status words, and
+  dates (YYYY-MM-DD) in English. Save files as UTF-8.
 - <the owner's style rules>
 ```
 
@@ -757,6 +763,7 @@ in staff/lead/KAUHALE.md.
 
 1. **Goals and key dates**
 2. **Style rules for all agents**: the owner's voice, spelling, punctuation, and words to avoid
+   - **Working language**: the language and variant agents write and talk in, if not English (`languages.md`)
    - **Data rules**: what sensitive material the project touches, where each kind lives, and what the AI service may see (section 17)
 3. **Ownership**: each role, its folder, and any shared files it owns
    - **Review gate** (when the kauhale has advisors): which reviews each kind of change needs before it merges
@@ -804,6 +811,7 @@ Before anything else, read staff/lead/roles/_hale-base.md and follow it.
 - **Requests to others** through OUTBOX.md; answers go in your own notes/.
 - **Reviews:** how to request one, and (for advisors) how to give one.
 - **Standing rules:** no sending, no signing; name the owning role when asked about another domain.
+- **Working language:** write and talk in the working language set in KAUHALE.md; keep the structure (file and folder names, headings, IDs, status words, ISO dates) in English; accept the routine words ("checkpoint", "sync", "start") in either language.
 - **Safeguards:** the rules in section 17 and the project's data rules in KAUHALE.md: no PHI, personal data, payment details, or secrets in git; de-identified data only in agent sessions unless the data rules allow more; logs summarize and never quote; report any leak to the owner at once.
 - **Sessions:** only the owner opens a hale; never start another hale or a second copy of yourself; use helpers only for your own work (section 12).
 
