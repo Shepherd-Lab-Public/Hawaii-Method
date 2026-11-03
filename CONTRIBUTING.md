@@ -13,7 +13,7 @@ For a large change (a new section, a change to a core rule such as ownership or 
 ## How to propose a change
 
 1. Fork this repository and create a branch for your change.
-2. Edit `hawaii-method.md`. Keep each pull request to one topic.
+2. Edit `hawaii-method.md` or `languages.md`. Keep each pull request to one topic.
 3. Add a line under **Unreleased** in `CHANGELOG.md` saying what changed and why.
 4. Open a pull request. Describe the problem, the change, and, for a lesson, where you saw it.
 

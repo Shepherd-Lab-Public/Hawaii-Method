@@ -4,6 +4,8 @@ A way to run a large, long project as a household of AI agents. The guide itself
 
 Copyright © 2026 John A. Shepherd and Sven Prevrhal. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): you may share and adapt it, with credit to the authors.
 
+**No warranty.** The Hawaii Method is provided as is, without warranty of any kind, and you use it at your own risk. It is general guidance, not legal, medical, compliance, or security advice. You are responsible for your project, for what your AI agents do, for reviewing their work, and for following the laws, institutional rules, and AI service terms that apply to you. To the fullest extent the law allows, the authors and contributors are not liable for any loss or harm arising from your use of the method. See section 5 of the [license](LICENSE) for the full disclaimer.
+
 ## Giving back
 
 If you use the method extensively, we suggest a donation of $25 to the Hawaii H.O.M.E. Project, Waikiki Health, or Kuaʻāina Ulu ʻAuamo (KUA). See the guide, Part B, section 1, "Giving back."

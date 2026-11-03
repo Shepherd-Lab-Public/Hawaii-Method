@@ -6,7 +6,9 @@ The Hawaii Method was created by John Shepherd, a professor at the University of
 
 Copyright © 2026 John A. Shepherd and Sven Prevrhal. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): you may share and adapt it, with credit to the authors.
 
-Version 2026-11-02. Changes from 2026-10-29: the method is now the Hawaii Method, and its parts have plain English names: house, Head House, responsibility, and HOUSEHOLD.md.
+**No warranty.** The Hawaii Method is provided as is, without warranty of any kind, and you use it at your own risk. It is general guidance, not legal, medical, compliance, or security advice. You are responsible for your project, for what your AI agents do, for reviewing their work, and for following the laws, institutional rules, and AI service terms that apply to you. To the fullest extent the law allows, the authors and contributors are not liable for any loss or harm arising from your use of the method. See section 5 of the [license](https://github.com/Shepherd-Lab-Public/Hawaii-Method/blob/main/LICENSE) for the full disclaimer.
+
+Version 2026-11-03. Changes from 2026-11-02: a no-warranty notice, and an invitation to send improvements back.
 
 Throughout this guide, **the owner** means you: the person the agents work for, who makes the final decisions.
 
@@ -284,6 +286,8 @@ The Hawaii Method is free to use. If you find it valuable and use it extensively
 - **Hawaii H.O.M.E. Project**, through the [University of Hawaii Foundation](https://www.uhfoundation.org): free clinics and a mobile health van for people experiencing homelessness on Oahu.
 - **[Waikiki Health](https://www.waikikihealth.org/how-to-help/donate-2/)**: health care in Honolulu regardless of ability to pay, with special attention to people who are uninsured, homeless, or living in poverty.
 - **[Kuaʻāina Ulu ʻAuamo (KUA)](https://go.kuahawaii.org/donate)**: support for rural and Native Hawaiian community groups caring for land and water across the islands.
+
+Improvements are welcome too. If running a household teaches you something, or you find a mistake in this guide, send it back by issue or pull request; [CONTRIBUTING.md](https://github.com/Shepherd-Lab-Public/Hawaii-Method/blob/main/CONTRIBUTING.md) shows how. Leave out private project details and anything sensitive.
 
 ## 2. Why this works
 
