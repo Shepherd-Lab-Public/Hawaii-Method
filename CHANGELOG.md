@@ -2,6 +2,12 @@
 
 Newest first. Each heading is a git tag.
 
+## 2026-11-03
+
+- No-warranty notice added to the top of the guide and the README, because the guide often travels without the LICENSE file. It points to section 5 of the license.
+- Giving back: the guide now invites people to send improvements back and links to CONTRIBUTING.md, so someone who has only the guide file can find it.
+- CONTRIBUTING.md: pull requests can edit `languages.md` as well as the guide.
+
 ## 2026-11-02
 
 - The method is now the Hawaii Method, and its parts have plain English names: house, Head House (still titled Lead by default), responsibility, and HOUSEHOLD.md. The guide is `hawaii-method.md` and the shared rules are `_house-base.md`.
