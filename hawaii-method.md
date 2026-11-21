@@ -8,7 +8,7 @@ Copyright © 2026 John A. Shepherd and Sven Prevrhal. Licensed under [CC BY 4.0]
 
 **No warranty.** The Hawaii Method is provided as is, without warranty of any kind, and you use it at your own risk. It is general guidance, not legal, medical, compliance, or security advice. You are responsible for your project, for what your AI agents do, for reviewing their work, and for following the laws, institutional rules, and AI service terms that apply to you. To the fullest extent the law allows, the authors and contributors are not liable for any loss or harm arising from your use of the method. See section 5 of the [license](https://github.com/Shepherd-Lab-Public/Hawaii-Method/blob/main/LICENSE) for the full disclaimer.
 
-Version 2026-11-03. Changes from 2026-11-02: a no-warranty notice, and an invitation to send improvements back.
+Version 2026-11-21. Changes from 2026-11-03: one Writer for a grant, manuscript, or book; start with fewer houses; each house commits only its own work; an end-of-day routine.
 
 Throughout this guide, **the owner** means you: the person the agents work for, who makes the final decisions.
 
@@ -137,7 +137,7 @@ Decide together, using Node 1 and Part B section 6:
 - **Seed** (one house): one kind of work, one person, and the project fits comfortably in a chat or two. Most new projects start here.
 - **Full household** (several houses): several distinct kinds of work, other people involved, or a long horizon of months.
 
-For a full household, look at what is already in the repository, then propose houses that fit how the work is organized, including any advisors (Part B section 7). Use Part B section 0 for book and website examples. Ask the person to confirm or adjust the list.
+For a full household, look at what is already in the repository, then propose houses that fit how the work is organized, including any advisors (Part B section 7). Propose the fewest houses that will do; more can be added when a distinct kind of work appears (Part B section 6). Use Part B section 0 for writing and website examples. Ask the person to confirm or adjust the list.
 
 Done when the shape is agreed: trial, seed, or a named list of houses with what each owns.
 
@@ -218,16 +218,16 @@ Close with a short summary of what was built, where it lives, and the opening li
 
 These are starting points; the first chat should propose a household that fits how your work is already organized.
 
-**A book**
+**A grant, a journal manuscript, or a book**
 
 | House | Kind | Responsibility |
 |---|---|---|
-| Editor | Head House | Outline, schedule, decisions, the manuscript as a whole |
-| Writer (one per part, or one overall) | builder | Drafting and revising chapters in its part |
-| Researcher | builder | Sources, facts, and notes that chapters draw on |
-| Continuity Keeper | advisor | The story bible: characters, places, timeline, voice. Reviews chapters for contradictions. |
-| Copy Editor | advisor | Style sheet and line-level review |
-| Publisher | builder | Formatting, front and back matter, exports, submissions |
+| Head House (PI for a grant, Editor for a book, Lead for a manuscript) | Head House | Outline, schedule, decisions, and the document as a whole |
+| Writer | builder | All of the text: drafting and revising every section or chapter, in one voice |
+| Librarian | builder | References, citations, and the sources the Writer draws on |
+| Guidelines Specialist | builder | Keeps up with the funder's, journal's, or publisher's guidelines; owns the templates, formatting, forms, page and word limits, and the assembly of the submission, and checks the result against the guidelines |
+
+Keep one Writer, even for a long book. Splitting the text among several writer houses, one per chapter or section, makes the household confusing and complicated to run. Start with the Head House and the Writer, or with a seed (section 6), and add the Librarian and the Guidelines Specialist when references or guidelines become work of their own. Add others only when a distinct kind of work appears, such as a Statistician for a grant's power calculations (section 20).
 
 **A website**
 
@@ -448,7 +448,7 @@ Every household has houses that make things. Larger or more technical ones also 
 
 ### Builders
 
-- Own a slice of the product: pipeline stages and their code, sections of a document, a website, a budget.
+- Own a slice of the product: pipeline stages and their code, the text of a document, its references, a website, a budget.
 - Change their own files and nothing else.
 - Implement against the advisors' specifications and request review when work is ready.
 
@@ -684,16 +684,24 @@ Nothing in the method is specific to Claude. It needs three things: a model that
 2. Update the directive files worked on; move finished ones to `done/`; update the index.
 3. Update PRODUCTS.md: add any new product, refresh the as-of date and status of any that changed.
 4. Rewrite STATE.md, with anything the Head House must know at the top.
-5. Commit `[PREFIX] PREFIX-NNN checkpoint`, then `git pull --rebase`, then `git push`.
+5. Commit your own changes only: check `git status`, stage your files by name, and commit `[PREFIX] PREFIX-NNN checkpoint`. Then `git pull --rebase`, then `git push`.
 
 **Sync** (say "sync" in the Head House chat):
-1. Update the timeline: check off finished items, refresh what is overdue and coming up.
-2. Refresh status by role in HOUSEHOLD.md; close finished directives.
-3. Compile the Head House's PRODUCTS.md from every house's PRODUCTS.md.
-4. Issue new directives for items coming due.
-5. Route requests; review self-proposed directives.
-6. Flag anything waiting on a person for more than 7 days.
-7. Log decisions.
+1. Check the checkpoints: list the houses with a checkpoint commit today and, in a local copy that several houses share, any house folder with uncommitted changes, so the owner can see which open houses still need a checkpoint.
+2. Update the timeline: check off finished items, refresh what is overdue and coming up.
+3. Refresh status by role in HOUSEHOLD.md; close finished directives.
+4. Compile the Head House's PRODUCTS.md from every house's PRODUCTS.md.
+5. Issue new directives for items coming due.
+6. Route requests; review self-proposed directives.
+7. Flag anything waiting on a person for more than 7 days.
+8. Log decisions.
+
+**End of day:**
+1. Say "checkpoint" in every house you opened today. Send them all at once; each house writes only its own folder, so they push cleanly in parallel. Houses you did not open have nothing to save.
+2. When they are done, say "sync" in the Head House, so it reads everyone's fresh STATE.md. Checkpoint any house it lists as missing.
+3. Close the sessions. Tomorrow each house starts fresh and pulls the latest files.
+
+The Head House never checkpoints or commits for another house: it does not know what that house did, and it would sweep that house's unfinished work into its own commit.
 
 **Where to talk:** decide in the Head House chat; do deep work in staff house chats. Long technical work in the Head House chat fills its context with detail, which is the overload this design avoids.
 
@@ -727,6 +735,10 @@ in staff/lead/HOUSEHOLD.md.
 ## Rules
 - Write only in your own folder and the files assigned to you.
 - Commit at each checkpoint, then git pull --rebase and git push.
+- Commit your own work, and only your own. Check git status, then stage
+  your files by name; never use git add -A, git add ., or git commit -a.
+  Never commit another house's changes, even to tidy up. If your work is
+  mixed with theirs, stop and tell the owner.
 - Never force-push or rewrite history on main.
 - Only the owner opens a house. Never start another house, or a second
   copy of yourself, as a subagent or background session. Helpers that
@@ -787,6 +799,7 @@ Before anything else, read staff/lead/roles/_house-base.md and follow it.
 ### 15.4 House base rules (headings to include)
 
 - **Access:** write only in your folder and assigned files; read anything permitted.
+- **Commits:** each house commits its own work, and only its own: stage files by name, never everything at once, and never commit another house's changes (section 16).
 - **Markdown and deliverables:** markdown for thinking and communicating; deliverable formats only for finished output.
 - **Your folder:** STATE.md, PRODUCTS.md, DIRECTIVES.md, directives/, OUTBOX.md, log/, notes/.
 - **Products:** list every work product in PRODUCTS.md (section 15.13) and keep it current at checkpoint. Anything with personal or contact data lives in Drive and is listed by document name.
@@ -935,6 +948,7 @@ Last updated: YYYY-MM-DD
 
 - Commit messages: `[PREFIX] PREFIX-NNN short description`.
 - Agent files commit directly to `main`. Each agent writes only its own folder, so parallel pushes rebase cleanly.
+- Each house commits its own work, and only its own. Stage files by name after checking `git status`; never `git add -A`, `git add .`, or `git commit -a`. When several houses share one local copy of the repository, staging everything sweeps another house's unfinished work into your commit. No house, the Head House included, commits another house's changes; if work is mixed, stop and tell the owner.
 - Product repositories keep their own review workflow (branch, preview, approval, merge). The house that owns one follows it.
 - Never force-push or rewrite `main`, except to remove leaked material (section 17). Unverified-commit badges on old commits are cosmetic; leave them.
 - `.gitignore` large binaries and sensitive data (section 17). For files that must stay local, such as copyrighted PDFs, commit a manifest listing what should be present, named by key.
@@ -1019,7 +1033,8 @@ For a project with PHI, human-subject data, or other regulated data, add a compl
 ## 20. Lessons learned
 
 - **Read before restructuring.** Look at the existing repositories, timelines, and agents before designing roles. One conference repository already had team labels and a planner agent whose duties split cleanly into the new roles.
-- **Deliverables as fragments.** When the product must be assembled (LaTeX attachments, a website, a book's chapters), each role writes plain fragments in its own folder and one role owns the build that pulls them in. Ownership stays clean and the build stays in one place.
+- **Deliverables as fragments.** When the product must be assembled (LaTeX attachments, a website), each role writes plain fragments in its own folder and one role owns the build that pulls them in. Ownership stays clean and the build stays in one place. The text of a single document is not split this way; one Writer owns all of it (see "One Writer per document" below).
+- **One Writer per document (a book, 2026-11-10).** A technical book's household started with seven houses: the Head House and three subject writers each owned chapters, beside a Librarian, a Typesetter, and a style advisor. Splitting the text by chapter made the household confusing and complicated to run. What works best for a grant, a journal manuscript, or a book is a Head House, one Writer who owns all the text, a Librarian, and a Guidelines Specialist who keeps the funder's, journal's, or publisher's guidelines and owns formatting and assembly (section 0). Start simple, with fewer houses, and add them only when they are needed.
 - **Specialists appear as you go.** A grant team added a Statistician once power calculations and demographics outgrew the Physicist. Adding a role means a role file, a folder, a row in the ownership and access tables, and a decision-log entry.
 - **Standing rules go in role files; work goes in directives.** A format for paper notes is a rule. Reading ten papers is a directive.
 - **Local-only resources need a plan.** A local database or gitignored PDFs are reachable only from VS Code on the machine that has them. Say so in the role file. A committed rebuild script (section 16) lets a second machine recreate a database instead of copying it.

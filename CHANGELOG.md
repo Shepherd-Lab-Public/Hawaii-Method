@@ -2,6 +2,14 @@
 
 Newest first. Each heading is a git tag.
 
+## 2026-11-21
+
+- Writing projects: the book example (section 0) becomes one example for a grant, a journal manuscript, or a book: a Head House, one Writer who owns all the text, a Librarian, and a Guidelines Specialist who keeps the funder's, journal's, or publisher's guidelines and owns formatting and assembly. Splitting the text among several writer houses proved confusing and complicated.
+- Start simple: setup (Node 6) proposes the fewest houses that will do, and the writing example starts with the Head House and the Writer, adding houses only when needed.
+- New lesson, "One Writer per document". "Deliverables as fragments" no longer applies to a book's chapters, and builders own the text of a document rather than sections of it (section 7).
+- Each house commits its own work, and only its own: stage files by name, never everything at once, and never commit another house's changes. Added to the CLAUDE.md template, the base rules (15.4), the checkpoint, and the git conventions (section 16), because houses sharing one local copy can otherwise sweep each other's unfinished work into a commit.
+- End of day (section 14): checkpoint every house opened today, all at once, then sync in the Head House, then close the sessions. Sync now starts by listing which houses checkpointed today and any house folder with uncommitted changes.
+
 ## 2026-11-03
 
 - No-warranty notice added to the top of the guide and the README, because the guide often travels without the LICENSE file. It points to section 5 of the license.
