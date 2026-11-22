@@ -2,6 +2,14 @@
 
 Newest first. Each heading is a git tag.
 
+## 2026-11-21b
+
+- VS Code first: the recommended setup is every house in Claude Code inside VS Code. New "What you need" list at the top of the guide: Claude Pro or higher (the free plan does not include Claude Code), a GitHub account, VS Code, Git, the Claude Code, LaTeX Workshop, and PDF extensions, and Gmail, Google Calendar, and Google Drive connectors turned on at claude.ai, which Claude Code picks up from the same account.
+- Setup: Node 4 now installs and signs in to these tools and clones the repository in VS Code, whose GitHub sign-in lets Claude push (the Claude GitHub App is needed only for app chats); a setup begun in a Claude chat moves into VS Code there. Node 7 runs every house in VS Code, Node 11 creates a command for each house, and Nodes 12 and 13 open and rotate houses with those commands. Sections 11, 12, 18, and 21 match.
+- App chats stay as the fallback for a house that cannot run in VS Code.
+- New lesson: a beginner fixed a broken website, moved it from WordPress to Jekyll, and then wrote a 42-chapter book with the method.
+- Staying current: setup (Node 1) asks how the person got the guide and checks it against the latest version on GitHub, using the latest if theirs is older. HOUSEHOLD.md section 1 records the version followed, as the README already said. Once a week, at sync, the Head House checks for a newer version and tells the owner what changed; the owner decides what to adopt (section 19).
+
 ## 2026-11-21
 
 - Writing projects: the book example (section 0) becomes one example for a grant, a journal manuscript, or a book: a Head House, one Writer who owns all the text, a Librarian, and a Guidelines Specialist who keeps the funder's, journal's, or publisher's guidelines and owns formatting and assembly. Splitting the text among several writer houses proved confusing and complicated.

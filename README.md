@@ -16,7 +16,7 @@ The guide is in English, but a household can work in other languages. See [langu
 
 ## Versions
 
-Each shared version is a git tag named by date (`2026-11-02`). `CHANGELOG.md` says what changed in each one and why. To get the exact file someone received:
+Each shared version is a git tag named by date (`2026-11-02`); a second version on the same day adds a letter (`2026-11-21b`). `CHANGELOG.md` says what changed in each one and why. To get the exact file someone received:
 
 ```
 git show 2026-11-02:hawaii-method.md > hawaii-method_2026-11-02.md

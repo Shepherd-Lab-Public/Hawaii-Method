@@ -8,7 +8,7 @@ Copyright © 2026 John A. Shepherd and Sven Prevrhal. Licensed under [CC BY 4.0]
 
 **No warranty.** The Hawaii Method is provided as is, without warranty of any kind, and you use it at your own risk. It is general guidance, not legal, medical, compliance, or security advice. You are responsible for your project, for what your AI agents do, for reviewing their work, and for following the laws, institutional rules, and AI service terms that apply to you. To the fullest extent the law allows, the authors and contributors are not liable for any loss or harm arising from your use of the method. See section 5 of the [license](https://github.com/Shepherd-Lab-Public/Hawaii-Method/blob/main/LICENSE) for the full disclaimer.
 
-Version 2026-11-21. Changes from 2026-11-03: one Writer for a grant, manuscript, or book; start with fewer houses; each house commits only its own work; an end-of-day routine.
+Version 2026-11-21b. Changes from 2026-11-21: VS Code with Claude Code is the recommended setup, with a list of what you need; a lesson from a beginner; setup and the weekly sync check that the guide is the latest version.
 
 Throughout this guide, **the owner** means you: the person the agents work for, who makes the final decisions.
 
@@ -28,7 +28,20 @@ Throughout this guide, **the owner** means you: the person the agents work for, 
 
 ## How to use this file
 
-**If you are a person:** upload this file to a new Claude chat and say "Help me set up the Hawaii Method for my project" (or "Help me try the Hawaii Method on my project"), in your own language if you prefer; Claude will continue in it. Claude will walk you through everything, one step at a time, including GitHub if you have never used it.
+**If you are a person:** upload this file to a new Claude chat at claude.ai and say "Help me set up the Hawaii Method for my project" (or "Help me try the Hawaii Method on my project"), in your own language if you prefer; Claude will continue in it. Claude will walk you through everything, one step at a time, including installing the tools below and GitHub if you have never used it. If you already have VS Code with Claude Code, open your project's folder, open the Claude Code panel, and say the same thing there, pointing it to this file.
+
+### What you need
+
+The method works best, even for complete beginners, with this setup:
+
+- **A Claude Pro plan or higher** (Pro is $20 a month; check claude.com/pricing for current prices). The free plan does not include Claude Code. Chat and Claude Code share one usage allowance; a busy household may need a larger plan.
+- **A GitHub account** (free), which holds the project.
+- **VS Code** (free), for all editing and all the work: every house runs in it, through Claude Code.
+- **Git**, which VS Code uses to save and send changes to GitHub: on Windows, Git for Windows; on a Mac, the developer tools the Mac offers to install the first time Git is needed.
+- **Three VS Code extensions:** Claude Code (by Anthropic); LaTeX Workshop, for documents written in LaTeX such as grants, manuscripts, and books (it also needs a TeX distribution: MiKTeX or TeX Live on Windows, MacTeX on a Mac); and a PDF viewer such as vscode-pdf, to read PDFs inside VS Code.
+- **Connectors** to Gmail, Google Calendar, and Google Drive, turned on at claude.ai. Claude Code picks them up when it is signed in with the same Claude account.
+
+Without VS Code, for example on a computer where you cannot install software, the houses can run in Claude app chats instead (Part B section 12).
 
 **If you are Claude:** someone has given you this guide. Unless they ask for something else, run the Guided Setup in Part A with them. Part B is the reference behind each step; consult it as you go.
 
@@ -58,6 +71,8 @@ First, settle the language. If the person wrote to you in a language other than 
 
 Switch to the chosen language right away and run the rest of the setup in it. This guide stays in English; you translate as you go.
 
+Next, make sure this is the latest version of the guide. Ask how they got it: by cloning or downloading the Hawaii Method repository from GitHub, or as a file someone sent them. Compare the version line near the top of this file ("Version" and a date, sometimes with a letter for a second version the same day) with the one in the latest copy at https://raw.githubusercontent.com/Shepherd-Lab-Public/Hawaii-Method/main/hawaii-method.md. If you cannot open the link, ask them to open https://github.com/Shepherd-Lab-Public/Hawaii-Method, click `hawaii-method.md`, and read you its version line. If theirs is older, use the latest for the rest of the setup: read it yourself, or have them download it (for a clone, pull it first) and give it to you. Note the version you follow; it goes into HOUSEHOLD.md (Node 10).
+
 Then explain the household idea in three sentences: the project lives in an online folder; each AI helper (a house) keeps its own notes there and works on one part; nothing is lost when a chat gets long, because the notes carry the memory.
 
 Ask:
@@ -86,27 +101,32 @@ Ask: "Does this project already have a GitHub repository?"
 Then bring in existing work, depending on the Node 1 answer:
 
 - **Nothing yet:** nothing to do.
-- **Files on their computer** (documents, images, code): in the repository, "Add file," then "Upload files," and drag the files in. The web upload takes up to 100 files at a time and files up to 25 MB each. Leave out anything private or sensitive. Mention that books and documents work best as plain text or Markdown, and that once you are connected (Node 4) you can convert Word or Google Docs files for them.
-- **Google Docs or Word:** easiest path is to download them (as .docx, or plain text) and upload as above, or wait until Node 4 and attach them in chat for you to convert and commit.
+- **Files on their computer** (documents, images, code): after Node 4, they copy the files into the project folder on their computer, and you commit them. Leave out anything private or sensitive. Mention that books and documents work best as plain text, Markdown, or LaTeX, and that you can convert Word files for them. (Without VS Code: in the repository on GitHub, "Add file," then "Upload files," and drag the files in; the web upload takes up to 100 files at a time and files up to 25 MB each.)
+- **Google Docs or Word:** download them (as .docx, or plain text) and copy them into the project folder after Node 4, for you to convert and commit.
 - **A website:** ask how the site is published.
   - From a GitHub repository (GitHub Pages, Netlify, Cloudflare Pages, Vercel): the site repository stays as it is. Create a second, private repository for the household itself, its control repository (Part B section 8). Note the site repository for Node 7.
   - From a website builder with no repository (Squarespace, Wix, WordPress.com): the household can still plan and draft content in a new repository, but changes to the live site stay manual. Say so plainly and continue.
 
 Done when the repository exists and holds what it should.
 
-### Node 4. Connect Claude to GitHub
+### Node 4. VS Code and Claude Code
 
-Two connections are needed:
+Set up the tools in "What you need" (top of this guide), one at a time, skipping any the person already has:
 
-1. **The Claude GitHub App** gives Claude permission to work in the repository. At github.com/apps/claude, choose "Install" (or "Configure" if it is already installed), choose their account, and select this repository (or all repositories).
-2. **The GitHub connector in Claude:** in Claude's Settings, under Connectors, connect GitHub and sign in.
+1. **The Claude plan:** confirm they have Pro or higher; the free plan does not include Claude Code.
+2. **VS Code and Git:** install VS Code from code.visualstudio.com. On Windows, also install Git for Windows from git-scm.com, accepting the default options. On a Mac, accept the offer to install the developer tools the first time Git is needed.
+3. **Extensions:** in VS Code's Extensions view (Ctrl+Shift+X, or Cmd+Shift+X on a Mac), search for and install Claude Code (by Anthropic), LaTeX Workshop, and vscode-pdf. If the project uses LaTeX, also install a TeX distribution (MiKTeX or TeX Live on Windows, MacTeX on a Mac).
+4. **Sign in to Claude:** open the Claude Code panel, choose "Sign in," and finish in the browser with their Claude account.
+5. **The repository on their computer:** in VS Code, "Clone Repository," then "Clone from GitHub." Sign in to GitHub when asked, pick the repository, choose a folder for it, and open it. This GitHub sign-in is what lets Claude commit and push from VS Code; the Claude GitHub App is not needed.
+6. **Connectors:** at claude.ai/customize/connectors, connect Gmail, Google Calendar, and Google Drive. They appear in Claude Code by themselves; typing `/mcp` in the Claude Code panel lists them.
+7. **Move into VS Code:** if this setup began in a Claude chat, the person now opens the Claude Code panel in the project folder and says "Continue the Hawaii Method setup at Node 5," pointing it to this guide (https://github.com/Shepherd-Lab-Public/Hawaii-Method/blob/main/hawaii-method.md). From here on, Claude in VS Code does each step itself.
 
-Then test it: try to attach or clone the repository yourself. When Claude asks for permission to add the repository with push access, the person allows it.
+Then test it: in the project folder, read the repository and report what is in it.
 
 - **It works:** go to Node 5 if the repository already holds work, otherwise Node 6.
-- **Access refused:** recheck that the App includes this repository, then reconnect GitHub under Connectors.
+- **A step fails:** solve it before moving on. If they cannot install software, the houses run in Claude app chats instead (Part B section 12): install the Claude GitHub App (github.com/apps/claude, "Install" or "Configure," choose their account and this repository), connect GitHub under Connectors in Claude's Settings, and allow push access when a chat asks.
 
-Done when you can read the repository and the person has allowed push access.
+Done when Claude Code is signed in, the project folder is open in VS Code, and you can read the repository.
 
 ### Node 5. Take inventory (existing repositories only)
 
@@ -143,10 +163,11 @@ Done when the shape is agreed: trial, seed, or a named list of houses with what 
 
 ### Node 7. Where the houses will work
 
-Ask: "Does any part of this project need programs to run on your own computer, or files that live only there?"
+Every house works in Claude Code in VS Code, on the computer set up in Node 4, and each opens with its own command (Node 11). Ask: "Will any house need to work from another computer, or from somewhere VS Code cannot run?"
 
-- **No** (writing, planning, most websites): every house works in Claude chats. Go on.
-- **Yes** (code that runs on local data, large files that stay off GitHub): those houses should run in Claude Code inside VS Code on that computer. Give a short pointer to installing VS Code and Claude Code, and note it in the setup; it can be done later.
+- **No:** go on.
+- **Another computer:** that computer needs the same setup (Node 4). Never run the same house on two computers at once.
+- **Somewhere VS Code cannot run:** that house runs in a Claude app chat (Part B section 12), as long as it needs nothing that lives only on the main computer: local data, gitignored files, or a local build.
 
 For a website or anything else that publishes, confirm that the household lives in its own control repository, and list which product repositories each house may change (Part B section 8).
 
@@ -170,32 +191,27 @@ Summarize the plan in a few lines and ask for the go-ahead. For an existing repo
 - **Seed:** create the files in Part B section 6 ("Seed layout").
 - **Full household:** create the files in Part B sections 8 and 15 (layout and templates): CLAUDE.md, the Head House's folder `staff/lead/` with HOUSEHOLD.md, STATE.md, PRODUCTS.md, DIRECTIVES.md, roles, and TEAM.md if needed, plus one folder per house under `staff/`.
 
-Fill HOUSEHOLD.md with the goals, dates, and style rules gathered so far. Commit and push. If you cannot push, give the person the files and walk them through "Add file," then "Upload files."
+Fill HOUSEHOLD.md with the goals, dates, and style rules gathered so far, and the version of this guide from Node 1. Commit and push. If you cannot push, give the person the files and walk them through "Add file," then "Upload files."
 
 For a control repository, add a short CLAUDE.md to each product repository that points to the control repository and names the house that owns it, through that repository's normal review workflow. Nothing else of the household goes there.
 
 Done when the files are on GitHub and the person can see them.
 
-### Node 11. The Claude project
+### Node 11. A command for each house
 
-Walk them through creating a Claude project for this household:
+Create one launcher per house, so each house opens with a single command typed in the Claude Code panel: `/lead`, `/writer`, `/librarian`. Each is a project skill at `.claude/skills/<house>/SKILL.md` that loads the house's role file and runs the start routine (Part B section 12). A seed needs only `/lead`. Commit and push them.
 
-- Name it after the project.
-- Paste the contents of CLAUDE.md into the project instructions.
-- Keep project memory separate from their other projects, if the setting is available, so the houses share only through the repository.
-- Upload no project files; the repository is the only copy.
+For any house that runs in a Claude app chat, also create a Claude project for the household: name it after the project, paste the contents of CLAUDE.md into the project instructions, keep project memory separate from their other projects if the setting is available, and upload no project files; the repository is the only copy.
 
 ### Node 12. First session
 
-Have them open a new chat in the project and send the opening line for the Head House, for example:
+In VS Code, have them start a new conversation in the Claude Code panel and type `/lead`. The Head House reads its files and reports in three lines.
 
-> You are the Head House (Editor) for <PROJECT>. Read `staff/lead/roles/lead.md` and follow it.
+(In an app chat, they open a new chat in the Claude project and send the opening line instead, for example: "You are the Head House (Editor) for <PROJECT>. Read `staff/lead/roles/lead.md` and follow it." For a seed: "You are the Head House (Lead) for <PROJECT>. Read `staff/lead/HOUSEHOLD.md` and `staff/lead/STATE.md`, then follow CLAUDE.md." When the chat asks to add the repository with push access, they allow it.)
 
-(Every household uses the same path, `staff/lead/roles/lead.md`, whether it is standalone or a control repository.)
+Every household uses the same path, `staff/lead/roles/lead.md`, whether it is standalone or a control repository.
 
-(For a seed: "You are the Head House (Lead) for <PROJECT>. Read `staff/lead/HOUSEHOLD.md` and `staff/lead/STATE.md`, then follow CLAUDE.md.")
-
-When it asks to add the repository with push access, allow it. Ask the new chat to make a small first entry and say "checkpoint." The person confirms the commit appears on GitHub. That proves the whole loop works.
+Ask the Head House to make a small first entry and say "checkpoint." If Git asks them to sign in to GitHub, they do. The person confirms the commit appears on GitHub. That proves the whole loop works.
 
 ### Node 13. The three habits
 
@@ -203,9 +219,9 @@ Teach these before finishing:
 
 1. **Checkpoint** at the end of every session. Anything not written to a file is forgotten.
 2. **Sync** (full households): the Head House reviews every house and assigns work.
-3. **Rotate** a chat when it grows long or starts forgetting: checkpoint, archive it, open a fresh one with the same opening line.
+3. **Rotate** a conversation when it grows long or starts forgetting: checkpoint, then start a new conversation and type the house's command. (In an app chat: archive it and open a fresh one with the same opening line.)
 
-Close with a short summary of what was built, where it lives, and the opening line for each house. For a trial, also restate the review date and the three choices at that date: keep, grow, or remove.
+Close with a short summary of what was built, where it lives, and the command for each house. For a trial, also restate the review date and the three choices at that date: keep, grow, or remove.
 
 ---
 
@@ -613,7 +629,7 @@ The owner chooses one of three:
 ## 11. Setup steps
 
 1. **Create the repository** in your GitHub account or organization; private is fine.
-2. **Install the Claude GitHub App** with access to the repository (github.com/apps/claude, choose your account, Configure, add the repo). Without it, agent chats cannot push.
+2. **Connect VS Code to GitHub** on each computer that runs houses: clone the repository in VS Code and sign in to GitHub when asked; that sign-in lets Claude Code push. Houses in app chats also need the Claude GitHub App with access to the repository (github.com/apps/claude, choose your account, Configure, add the repo); without it, app chats cannot push.
 3. **Scaffold the folders** under `staff/` from section 8, with empty templates from section 15.
 4. **Write the role files** in `staff/lead/roles/`: one per agent, plus `_house-base.md` with the shared rules. Domain, deliverables, owned files, and who to hand off to.
 5. **Write HOUSEHOLD.md** (section 15.2): goals and key dates, style rules, ownership table, status by role, decision log, pointer to the directives index.
@@ -621,11 +637,13 @@ The owner chooses one of three:
 7. **Seed the timeline** (TODO.md or roadmap) from whatever exists: an old spreadsheet, issue list, or planning doc.
 8. **Seed TEAM.md** with the humans, names and titles only.
 9. **Commit and push.** Any pointer file added to a product repository goes through that repository's own review workflow.
-10. **Create the Claude project** (section 12).
-11. **Open the Head House's chat first** and ask for a sync. It turns the timeline into the first directives.
-12. **Open staff house chats as they get directives.** A house with nothing assigned has nothing to do.
+10. **Create a command for each house** (section 12), and the Claude project if any house runs in an app chat.
+11. **Open the Head House first** and ask for a sync. It turns the timeline into the first directives.
+12. **Open staff houses as they get directives.** A house with nothing assigned has nothing to do.
 
 ## 12. Claude project and tools
+
+**The recommended setup:** every house runs in Claude Code inside VS Code, with the tools in "What you need" at the top of this guide. Each house opens with its own command (below), the connectors come from the Claude account, and pushes use VS Code's GitHub sign-in. App chats are the fallback for a house that cannot run in VS Code; the Claude project settings below are for them.
 
 **Project instructions:** paste the same text as CLAUDE.md, so app chats and VS Code follow one source. Point to the repository by name.
 
@@ -634,7 +652,7 @@ The owner chooses one of three:
 - Upload no files to the project. The repository is the only copy; uploaded copies go stale.
 - Archive old chats from before the setup once anything useful in them is captured in the repository.
 
-**Connectors:** GitHub is required. Add what the roles need: Google Drive for documents, Gmail for drafts, Jotform for forms, Google Calendar for dates.
+**Connectors:** add what the roles need at claude.ai/customize/connectors: Google Drive for documents, Gmail for drafts, Google Calendar for dates, Jotform for forms. Connectors turned on there also appear in Claude Code when it is signed in with the same Claude account; type `/mcp` in the Claude Code panel to see them. Connect Gmail and Google Calendar at claude.ai, not from inside Claude Code. App chats also need the GitHub connector.
 
 **First prompt in each chat:** when the chat asks to add the repository with push access, choose Allow.
 
@@ -646,7 +664,7 @@ Name chats by project, role, and generation: "Novel Editor", later "Novel Editor
 
 **VS Code:** open the repository root (agents read across folders). CLAUDE.md loads automatically. Start each session with the same role line and `git pull`.
 
-**App chat or VS Code?** App chats run in the cloud and reach GitHub from any device. Use VS Code when a role needs something only on your computer: a local database, gitignored PDFs, or a local build.
+**App chat or VS Code?** Use VS Code for every house you can. App chats run in the cloud and reach GitHub from any device, so they suit a house that must work away from the computer with VS Code; they cannot reach anything only on your computer: a local database, gitignored PDFs, or a local build.
 
 **Where each house runs.** It is the same model in both places; what differs is what it can reach. A house that must run code against local data (a database, images, a network drive) needs Claude Code in VS Code or a terminal on the machine with that data, so it can run, read the result, and fix in a loop. Houses that write, specify, review, or coordinate work well in app chats. In an analysis pipeline, builders that touch code run on the machine with the data; the Physicist, Statistician, Reporter, Programmer reviews, and the Head House run anywhere.
 
@@ -660,7 +678,7 @@ In Claude Code, this can be enforced rather than only instructed: a `PreToolUse`
 
 **Switching roles with one command per house (Claude-specific).** The mechanism below is unique to Claude Code; the principle is general: give each role a single command that starts a fresh session and loads its role file. Other agent tools offer their own ways to store reusable prompts or commands; use whatever the tool provides, or simply paste the role line into a new session. In Claude Code, give each house a project skill at `.claude/skills/<house>/SKILL.md` with `disable-model-invocation: true`, so only the human can run it. The skill pulls, reads CLAUDE.md and the role file, and runs the start routine. Switching roles is then: start a new conversation in the Claude panel and type `/lead`, `/webmaster`, `/statistician`. Each new conversation is a fresh session, so the start routine runs every time without a trigger rule. The skills live in the repository, so every clone has them.
 
-**Split by what each house must reach.** The principle is general: run a role wherever its tools and data are. In the Claude setup, houses that need connectors (Gmail, Calendar, Drive, the Claude project) run in Claude app chats with the daily-restart rule. Houses that work on repository files and local, gitignored sources run in VS Code, where local folders are visible and fresh sessions come free (section 20, "Open chats never restart").
+**Split by what each house must reach.** The principle is general: run a role wherever its tools and data are. In the Claude setup, VS Code reaches both: local folders are visible, connectors (Gmail, Calendar, Drive) come from the Claude account, and fresh sessions come free with each command (section 20, "Open chats never restart"). So every house can run there, and app chats, with the daily-restart rule, are needed only for a house that must work elsewhere.
 
 ## 13. Using other models
 
@@ -694,7 +712,8 @@ Nothing in the method is specific to Claude. It needs three things: a model that
 5. Issue new directives for items coming due.
 6. Route requests; review self-proposed directives.
 7. Flag anything waiting on a person for more than 7 days.
-8. Log decisions.
+8. Once a week, check for a newer version of the method (section 19).
+9. Log decisions.
 
 **End of day:**
 1. Say "checkpoint" in every house you opened today. Send them all at once; each house writes only its own folder, so they push cleanly in parallel. Houses you did not open have nothing to save.
@@ -759,7 +778,7 @@ in staff/lead/HOUSEHOLD.md.
 
 ### 15.2 HOUSEHOLD.md sections
 
-1. **Goals and key dates**
+1. **Goals and key dates**, and the version of the Hawaii Method the household follows (for example, "Hawaii Method 2026-11-21")
 2. **Style rules for all agents**: the owner's voice, spelling, punctuation, and words to avoid
    - **Working language**: the language and variant agents write and talk in, if not English (`languages.md`)
    - **Data rules**: what sensitive material the project touches, where each kind lives, and what the AI service may see (section 17)
@@ -1008,7 +1027,7 @@ For a project with PHI, human-subject data, or other regulated data, add a compl
 - **TEAM.md** names the human behind each role and how they connect.
 - **Agents never contact people.** They draft; the owner sends.
 - **Tracking:** `[human: Name]` tags on tasks, a `Human:` line on directives, a "Waiting on people" list in STATE.md, and the Head House flags anything older than 7 days at sync.
-- **Counterparts with GitHub access** need only a Claude account with the GitHub connector and one opening line naming their role and themselves. The repository carries the rules.
+- **Counterparts with GitHub access** need only the setup in "What you need" (or, for an app chat, a Claude account with the GitHub connector) and one opening line naming their role and themselves. The repository carries the rules.
 - **Limiting a counterpart to their role** takes GitHub, since instructions alone are not enforcement:
   - Any plan: a ruleset on `main` requiring pull requests, with the owner as the only bypass; a role map of GitHub usernames; a GitHub Action that fails a pull request touching folders outside the author's role; CODEOWNERS for the Head House folder.
   - Team or Enterprise plan: push rulesets that block changes to protected paths unless the pusher is on the bypass list.
@@ -1029,6 +1048,8 @@ For a project with PHI, human-subject data, or other regulated data, add a compl
 **The rule that matters most:** never end a session without a checkpoint.
 
 **Long-lived chats need a restart trigger.** Rotating chats is one remedy; the other is the daily-restart rule in section 12, which keeps an open chat from working on a stale clone.
+
+**Keep up with the method.** The guide changes, and each version is dated. Once a week, at sync, the Head House compares the version in HOUSEHOLD.md with the version line of the latest guide (https://raw.githubusercontent.com/Shepherd-Lab-Public/Hawaii-Method/main/hawaii-method.md). If a newer one exists, it reads the CHANGELOG entries since (https://github.com/Shepherd-Lab-Public/Hawaii-Method/blob/main/CHANGELOG.md) and tells the owner what changed and what it would mean for the household. It changes no rules on its own: the owner decides what to adopt, and then the version in HOUSEHOLD.md is updated. Read the guide from its link, not from a copy kept in the project, which goes stale; if you cloned the Hawaii Method repository, pull it before reading.
 
 ## 20. Lessons learned
 
@@ -1055,12 +1076,16 @@ For a project with PHI, human-subject data, or other regulated data, add a compl
 - **Going public exposes the history (2026-10-24).** When this guide's own repository was made public, its current text was clean, but earlier versions named the projects behind the lessons and described one lab's leak in detail, and every version was readable through old commits and tags. Fixing it meant rewriting the history, force-pushing, and asking GitHub to purge its cached copies; clones made before the fix kept the old text. Read the history, not just the current files, before changing a repository's visibility (section 17).
 - **Deleting a published file is not instant (a research lab, 2026-10-09).** After the fix merged, the site's origin returned 404, but the hosting provider's edge cache kept serving copies for days. The site's domain was managed by another organization, so the owner had no way to purge that cache. The copies could only age out. Keep working files out of product repositories from the start, and know the cache lifetime and who can purge it before anything sensitive is published.
 
+- **Beginners can run it (a website and a book).** Someone new to these tools, working with the setup in "What you need," first used the method to fix her broken website. She then used it to move the site from WordPress to Jekyll, a site built from plain text and HTML files kept on GitHub, and then to write a book of 42 chapters.
+
 ## 21. New project checklist
 
+- [ ] Guide checked against the latest version, and that version recorded in HOUSEHOLD.md
 - [ ] Trial only: start tagged, additive changes only, review date in HOUSEHOLD.md
 - [ ] Existing repository: adoption checklist (section 9) followed
 - [ ] Shape decided: seed or full household, standalone or control repository, roles, product format, humans
-- [ ] Repository created; Claude GitHub App has access
+- [ ] Tools set up (Node 4): Claude Pro or higher, VS Code, Git, the Claude Code, LaTeX Workshop, and PDF extensions, Claude Code signed in
+- [ ] Repository created and cloned in VS Code, with GitHub signed in (app chats: Claude GitHub App has access)
 - [ ] Folders and templates scaffolded
 - [ ] Builder and advisor houses chosen; review gate written into HOUSEHOLD.md (if any advisors)
 - [ ] Role files and the shared base rules written
@@ -1072,9 +1097,9 @@ For a project with PHI, human-subject data, or other regulated data, add a compl
 - [ ] Database (if any): SQLite, file gitignored, schema and rebuild script committed, one owning house, backup plan for anything that cannot be rebuilt
 - [ ] Live product checked by URL: working files and the pointer CLAUDE.md return 404
 - [ ] Committed and pushed (or merged after review)
-- [ ] Claude project created with instructions, memory separate, no uploads
-- [ ] Connectors on; old chats archived
-- [ ] Head House chat opened; first sync run
-- [ ] First staff house chats opened with role lines
+- [ ] A command for each house in `.claude/skills/` (app chats: Claude project created with instructions, memory separate, no uploads)
+- [ ] Connectors on at claude.ai and listed by `/mcp`; old chats archived
+- [ ] Head House opened with `/lead`; first sync run
+- [ ] First staff houses opened with their commands
 - [ ] Rule in CLAUDE.md and the base rules: only the owner opens a house (optionally enforced by a hook)
 - [ ] First checkpoint confirmed on GitHub
